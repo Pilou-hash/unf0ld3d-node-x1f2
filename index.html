@@ -80,4 +80,48 @@
         src: "cat-duck.gif"
       },
       {
-        title: "#3 Hugging Cat 🤗
+        title: "#3 Hugging Cat 🤗",
+        desc: "A cat who loves his little bear <333",
+        src: "Hugging-cat.png"
+      },
+      {
+        title: "#4 Camera Cat 🎥🐾",
+        desc: "Little lovely cat caught on cam 💕",
+        src: "Chat-caméra.png"
+      },
+      {
+        title: "#5 Worker Cat 👷‍♂️💼",
+        desc: "Still more productive than me tbh 😹",
+        src: "cat-cat-meme.gif"
+      }
+    ];
+
+    let currentCat = 0;
+
+    function showNextCat() {
+      if (currentCat < cats.length) {
+        const cat = cats[currentCat];
+        document.getElementById("catImage").src = cat.src;
+        document.getElementById("catTitle").innerText = cat.title;
+        document.getElementById("catDesc").innerText = cat.desc;
+
+        document.getElementById("catImage").style.display = "block";
+        document.getElementById("catTitle").style.display = "block";
+        document.getElementById("catDesc").style.display = "block";
+
+        currentCat++;
+
+        if (currentCat === cats.length) {
+          document.getElementById("nextBtn").innerText = "That's all the cats 🥺💕";
+          document.getElementById("nextBtn").disabled = true;
+          document.getElementById("nextBtn").style.opacity = 0.6;
+          document.getElementById("nextBtn").style.cursor = "not-allowed";
+        } else {
+          document.getElementById("nextBtn").innerText = "Show me another cat 🐾";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
