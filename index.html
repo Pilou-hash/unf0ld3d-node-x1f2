@@ -2,58 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bored?</title>
+  <title>Top 5 Random Cats 🐾</title>
   <style>
     body {
-      background-color: #111;
-      color: white;
-      font-family: 'Courier New', monospace;
+      background-color: #ffe6f0;
+      color: #5c3b47;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      padding-top: 100px;
+      padding: 50px 20px;
     }
 
-    button {
-      background-color: #444;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+    h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
     }
 
-    button:hover {
-      background-color: #666;
+    .cat-card {
+      background-color: #fff0f5;
+      border: 2px dashed #ffb6c1;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 10px #ffc0cb70;
     }
 
-    #message {
-      margin-top: 40px;
-      font-size: 20px;
-      display: none;
+    .cat-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 15px;
+      margin-top: 15px;
     }
 
-    #gif {
-      margin-top: 20px;
-      width: 300px;
-      display: none;
+    .cat-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .cat-desc {
+      font-size: 16px;
+      font-style: italic;
+      color: #a0526d;
     }
   </style>
 </head>
 <body>
 
-  <button onclick="showMessage()">I have nothing to do, I'm bored</button>
+  <h1>😿 Bad day? 💤 Are you tired?<br>✨ Here is a Top 5 Random Cat 🌸💐</h1>
 
-  <div id="message">Stop being lazy and go back to work 😤</div>
-  <img id="gif" src="cat-cat-meme.gif" alt="Funny cat">
+  <div class="cat-card">
+    <div class="cat-title">#1 Parisian Cat 🥐🇫🇷</div>
+    <div class="cat-desc">French Cat</div>
+    <img src="Parisian cat.jpg" alt="Parisian Cat">
+  </div>
 
-  <script>
-    function showMessage() {
-      document.getElementById("message").style.display = "block";
-      document.getElementById("gif").style.display = "block";
-    }
-  </script>
+  <div class="cat-card">
+    <div class="cat-title">#2 Cat vs Duck 🐱🦆</div>
+    <div class="cat-desc">Noooo the duck stole the cat food >:(</div>
+    <img src="cat-duck.gif" alt="Cat Duck">
+  </div>
 
-</body>
-</html>
-
+  <div class="cat-card">
+    <div class="cat-title">#3 Hugging Cat 🤗
