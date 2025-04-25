@@ -9,61 +9,75 @@
       color: #5c3b47;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 40px;
+      font-size: 26px;
+      margin-bottom: 30px;
     }
 
-    .cat-card {
-      background-color: #fff0f5;
-      border: 2px dashed #ffb6c1;
-      border-radius: 20px;
-      padding: 20px;
+    #catImage {
+      max-width: 90%;
+      max-height: 400px;
       margin: 20px auto;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: 0 0 10px #ffc0cb70;
-    }
-
-    .cat-card img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: contain;
+      display: none;
       border-radius: 15px;
-      margin-top: 15px;
+      box-shadow: 0 0 10px #ffc0cb90;
     }
 
-    .cat-title {
+    #catTitle {
       font-size: 22px;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin-top: 20px;
+      display: none;
     }
 
-    .cat-desc {
+    #catDesc {
       font-size: 16px;
       font-style: italic;
       color: #a0526d;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    #nextBtn {
+      background-color: #ffb6c1;
+      color: #5c3b47;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #nextBtn:hover {
+      background-color: #ffa6b8;
     }
   </style>
 </head>
 <body>
 
-  <h1>😿 Bad day? 💤 Are you tired?<br>✨ Here is a Top 5 Random Cat 🌸💐</h1>
+  <h1>🌸 Bad day? Are you tired? 🌷<br>Click the button for a dose of cat love 🐱💖</h1>
 
-  <div class="cat-card">
-    <div class="cat-title">#1 Parisian Cat 🥐🇫🇷</div>
-    <div class="cat-desc">French Cat</div>
-    <img src="Parisian cat.jpg" alt="Parisian Cat">
-  </div>
+  <button id="nextBtn" onclick="showNextCat()">Click for comfort 🐾</button>
 
-  <div class="cat-card">
-    <div class="cat-title">#2 Cat vs Duck 🐱🦆</div>
-    <div class="cat-desc">Noooo the duck stole the cat food >:(</div>
-    <img src="cat-duck.gif" alt="Cat Duck">
-  </div>
+  <div id="catTitle"></div>
+  <div id="catDesc"></div>
+  <img id="catImage" src="" alt="Cute cat">
 
-  <div class="cat-card">
-    <div class="cat-title">#3 Hugging Cat 🤗
+  <script>
+    const cats = [
+      {
+        title: "#1 Parisian Cat 🥐🇫🇷",
+        desc: "French Cat",
+        src: "Parisian cat.jpg"
+      },
+      {
+        title: "#2 Cat vs Duck 🐱🦆",
+        desc: "Noooo the duck stole the cat food >:(",
+        src: "cat-duck.gif"
+      },
+      {
+        title: "#3 Hugging Cat 🤗
