@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bored?</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    #message {
+      margin-top: 40px;
+      font-size: 20px;
+      display: none;
+    }
+
+    #gif {
+      margin-top: 20px;
+      width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showMessage()">I have nothing to do, I'm bored</button>
+
+  <div id="message">Stop being lazy and go back to work 😤</div>
+  <img id="gif" src="cat-cat-meme.gif" alt="Funny cat">
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("gif").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
 
